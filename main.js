@@ -25,13 +25,15 @@ const getTrainingDays = event => {
 
     return days;
 };
+
 const name = 'Nala';
 // The scope of `name` is too tight 
-const logEvent = (event, name) => {
+
+const logEvent = (name, event) => {
     console.log(`${name}'s event is: ${event}`);
 };
 
-const logTime = (days, name) => {
+const logTime = (name, event) => {
     console.log(`${name}'s time to train is: ${days} days`);
 };
 
@@ -40,12 +42,12 @@ const days = getTrainingDays(event);
 // Define a `name` variable. Use it as an argument after updating logEvent and logTime 
 
 
-logEvent(event, name);
-logTime(days, name);
+logEvent(name, event);
+logTime(name, days);
 
 const event2 = getRandEvent();
 const days2 = getTrainingDays(event2);
 const name2 = 'Warren';
 
-logEvent(event2, name2);
-logTime(days2, name2);
+logEvent(name2, event2);
+logTime(name2, days2);
